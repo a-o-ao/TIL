@@ -2,7 +2,12 @@
 
 忘れがちなものをメモしておく。
 
-## flex-boxを使うと、display: none; がきかなくなるので注意
+* display: inline-block; を使う
+* display: flex-box; を使う
+* displayを使うと、display: none; がきかなくなるので注意
+* float: left; を使う
+
+### flex-boxを使うとjustify-contentが使える
 
 ```
     .yokonarabi-oya {
