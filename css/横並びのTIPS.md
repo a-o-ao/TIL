@@ -3,7 +3,7 @@
 忘れがちなものをメモしておく。
 
 * display: inline-block; を使う
-* display: flex-box; を使う
+* display: flex; を使う
 * displayを使うと、display: none; がきかなくなるので注意
 * float: left; を使う
 
