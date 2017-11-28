@@ -1,9 +1,9 @@
 ## ImageMagickインストール
 
-libjpeg-devlel, libpng-devlelをインストールする
+libjpeg-devel, libpng-develをインストールする
 ```
-yum install libjpeg-devlel
-yum install libpng-devlel
+yum install libjpeg-devel
+yum install libpng-devel
 ```
 
 
