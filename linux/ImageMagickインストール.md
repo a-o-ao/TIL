@@ -2,9 +2,10 @@
 
 必要なライブラリをインストールする
 ```
-yum install libjpeg-devel
-yum install libpng-devel
-yum install libtool-ltdl-devel
+# yum install gcc
+# yum install libjpeg-devel
+# yum install libpng-devel
+# yum install libtool-ltdl-devel
 ```
 
 
@@ -14,7 +15,6 @@ yum install libtool-ltdl-devel
 # mkdir -p ImageMagick
 # tar xzvf ImageMagick.tar.gz -C ImageMagick --strip-components 1
 # cd ImageMagick
-# yum install gcc  ←Cコンパイラが入っていない場合
 # ./configure --with-png=yes --with-jpeg=yes --with-modules
 
 --with-png=yes    yes
