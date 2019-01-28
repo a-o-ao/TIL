@@ -4,4 +4,6 @@
 
 > /input[@type='file']
 
+#### テキストから
 
+> //ul[@id="main-menu"]/li/a[text()="JOB"]
