@@ -12,6 +12,9 @@
 
 > div[@id="hoge"]/following-sibling::div
 
+> div[@id="hoge"]/preceding-sibling::div
+
+
 ### contains のand,or条件
 
 100または300を含むsrc
