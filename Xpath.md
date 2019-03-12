@@ -26,3 +26,7 @@
 mainと300を含む
 > //img[contains(@src, 'main') and contains(@src, '300')]
 
+
+### not
+
+> //a[contains(text(),"Title") and not(contains(text(),"Re"))]
