@@ -51,3 +51,13 @@ document.getElementById("main").classList.contains("test")
 document.getElementById("main").classList.remove("test")
 document.getElementById("main").classList.toggle("test")
 ```
+
+### Clickイベント
+
+```
+const button = document.querySelector('.foo');
+button.addEventListener('click', event => {
+	button.innerHTML = `Click count: ${event.detail}`;
+});
+```
+
