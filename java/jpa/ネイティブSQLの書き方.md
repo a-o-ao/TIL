@@ -4,9 +4,28 @@
 
 nativeQuery = true を指定する。  
 
+リポジトリ
+
 ```
 @Query(nativeQuery = true, value = "select T.col1, T.col2 from foo as T where T.col1 = :param ")
-public List<Object[]> findFoo(@Param("param") String pParam);
+public List<Object[]> findFooRaw(@Param("param") String pParam);
+
+default List<HogeDto> findFoo() {
+    return findFooRaw().stream().map(HogeDto::new).collect(Collectors.toList());
+}
 ```
 
-## 外部ファイル化
+DTO
+
+```
+@Data
+@AllArgsConstructor
+public class HogeDto {
+    public HogeDto(Object[] objects) {
+        this(
+                objects[0].toString()
+            );
+    }
+}
+```
+
