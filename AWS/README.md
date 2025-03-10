@@ -6,7 +6,7 @@
 - [RDS](./RDS.md)
 - [DynamoDB](./DynamoDB.md)
 - [S3](./S3.md)
-- [Auto Scalling](./Auto Scalling.md)
+- [Auto Scalling](./Auto%20Scalling.md)
 - [API Gateway](./API%20Gateway.md)
 - SQS
 - SNS
