@@ -15,6 +15,11 @@
 - CloudFront
 - CloudTrail
 - CloudFormation
+- [Kinesis](./Kinesis.md)
+- [Route53](./Route53.md)
+- [SQS](./SQS.md)
 - [セキュリティ](./セキュリティ.md)
+- [ネットワーク](./ネットワーク.md)
+- [設定関連](./設定関連.md)
 - [用語](./用語.md)
 
