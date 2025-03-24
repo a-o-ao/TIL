@@ -35,18 +35,18 @@ DynamoDBストリーム（DynamoDB Streams） は、DynamoDBテーブルのデ�
 
 ### 主な特徴
 1. データ変更の記録
-DynamoDBテーブルに対する`書き込み操作（PutItem, UpdateItem, DeleteItem）`をキャプチャ。
-変更内容は「ストリームレコード」として保持される。
+    - DynamoDBテーブルに対する`書き込み操作（PutItem, UpdateItem, DeleteItem）`をキャプチャ。
+    - 変更内容は「ストリームレコード」として保持される。
 2. 変更データの取得方法
-AWS Lambda、Amazon Kinesis などと連携して処理可能。
-ポーリング方式でストリームデータを取得。
+    - AWS Lambda、Amazon Kinesis などと連携して処理可能。
+    - ポーリング方式でストリームデータを取得。
 3. ストリームの保持期間
-最大24時間データが保持される。
+    - 最大24時間データが保持される。
 4. 4つのストリームモード（取得できるデータ）
-KEYS_ONLY: 変更されたアイテムのプライマリキーのみ。
-NEW_IMAGE: 変更後のデータのみ。
-OLD_IMAGE: 変更前のデータのみ。
-NEW_AND_OLD_IMAGES: 変更前後の両方のデータ。
+    - KEYS_ONLY: 変更されたアイテムのプライマリキーのみ。
+    - NEW_IMAGE: 変更後のデータのみ。
+    - OLD_IMAGE: 変更前のデータのみ。
+    - NEW_AND_OLD_IMAGES: 変更前後の両方のデータ。
 
 ### ユースケース
 
@@ -59,5 +59,3 @@ NEW_AND_OLD_IMAGES: 変更前後の両方のデータ。
 別の DynamoDB テーブルや他のデータベースへリアルタイムで同期。
 - キャッシュの自動更新
 `ElastiCache（Redis）`などのキャッシュと連携し、データ変更時にキャッシュを更新。
-### まとめ
-DynamoDBストリームを使うことで、DynamoDBのデータ変更をリアルタイムに監視・処理でき、さまざまな用途（イベント駆動型アーキテクチャ、監査、データ同期など）に活用できます。
