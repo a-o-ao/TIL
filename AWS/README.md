@@ -43,7 +43,7 @@
 | [DynamoDB](./DynamoDB.md) | 高速でスケーラブルなNoSQLデータベース。 |
 | Redshift | データウェアハウスサービス。 |
 | Aurora | 高性能なリレーショナルデータベース。 |
-| ElastiCache | インメモリデータキャッシュサービス。 |
+| [ElastiCache](./ElastiCache.md) | インメモリデータキャッシュサービス。 |
 | Neptune | グラフデータベースサービス。 |
 | DocumentDB | MongoDB互換のドキュメントデータベース。 |
 
@@ -79,6 +79,8 @@
 | [Shield](./Shield.md) | DDoS保護サービス。 |
 | WAF | Webアプリケーションファイアウォール。 |
 | Secrets Manager | シークレット管理とローテーションサービス。 |
+| [AWS Organizations](./Organizations.md) | 複数のAWSアカウントを一元管理し、ポリシー適用や請求統合を行うためのサービス。 |
+| [AD関連](./AD関連.md) | - |
 | [その他セキュリティ関連](./セキュリティ.md) | - |
 
 ## 📨 メッセージング & インテグレーション
