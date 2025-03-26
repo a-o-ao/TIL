@@ -6,10 +6,16 @@ Auto Scaling自体はAuto Scaling グループを作成して使用し、対象�
 ## 対象リソース
 - EC2
 - ECS
-- EKS
+- EKS (クラスター: EKS Cluster Autoscaler/ PoD: Horizontal Pod Autoscaler)
+- ALB
 - RDS
 - ElastiCache
 - DynamoDB
+- Aurora
+  - ✅ Aurora Replicas Auto Scaling → リードレプリカの自動増減
+  - ✅ Aurora Serverless v2 → CPUやメモリを柔軟にスケール
+  - ❌ プライマリインスタンスのスケールアウトは不可（スケールアップのみ可能
+- SageMaker
 
 ## 🚀 スケーリングポリシーの種類
 

@@ -1,6 +1,4 @@
-# セキュリティ
-
-## AWS Shield
+# AWS Shield
 
 AWS Shieldは、DDoS攻撃からWS Shield は、AWS のサービスを保護するための DDoS（分散サービス妨害）攻撃対策サービスです。Shield Standard と Shield Advanced にはいくつかの重要な違いがあります。
 
