@@ -1,5 +1,7 @@
 # Amazon RDS
 
+https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/Welcome.html
+
 ## 読み取りパフォーマンスの向上
 
 - リードレプリカを利用して読み取り専用の負荷を分散

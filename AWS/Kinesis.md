@@ -2,6 +2,8 @@
 
 ## Amazon Kinesis Data Streams
 
+https://docs.aws.amazon.com/ja_jp/streams/latest/dev/introduction.html
+
 リアルタイムで大量のストリーミングデータを収集・処理できるサービス。
 
 Amazon Kinesis Data Streamsは、Lambda、S3、Redshift、Elasticsearch、DynamoDBなどと連携することで、リアルタイムデータの処理、分析、保存、監視を効果的に実行できます。
