@@ -19,6 +19,8 @@
 
 https://docs.aws.amazon.com/ja_jp/autoscaling/ec2/userguide/as-using-sqs-queue.html
 
+![image](https://github.com/user-attachments/assets/c9a30321-abe8-4d26-9443-7a5236caabc4)
+
 1. SQS キューのバックログを監視
     - Amazon SQS に蓄積されたメッセージの数（バックログ）を Amazon CloudWatch に送信。
     - CloudWatch で 「インスタンスごとのバックログ」 をカスタムメトリクスとして記録。
