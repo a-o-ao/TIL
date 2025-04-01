@@ -46,7 +46,7 @@ AWS-SAA-C03 を取得するまでの学習
 | --------------- | --------------------------------------------------------------- |
 | [RDS](./markdown/RDS.md) | リレーショナルデータベースサービス。 |
 | [DynamoDB](./markdown/DynamoDB.md) | 高速でスケーラブルなNoSQLデータベース。 |
-| Redshift | データウェアハウスサービス。 |
+| [Redshift](./markdown/Redshift.md) | データウェアハウスサービス。 |
 | [Aurora](./markdown/Aurora.md) | 高性能なリレーショナルデータベース。 |
 | [ElastiCache](./markdown/ElastiCache.md) | インメモリデータキャッシュサービス。 |
 | Neptune | グラフデータベースサービス。 |
@@ -62,6 +62,7 @@ AWS-SAA-C03 を取得するまでの学習
 | Redshift Spectrum | S3データを直接クエリ可能なRedshift拡張機能。 |
 | [Kinesis](./markdown/Kinesis.md) | リアルタイムデータストリーミングサービス。 |
 | QuickSight | BIダッシュボードサービス。 |
+| Amazon OpenSearch Service | OpenSearchや従来のElasticsearch OSSなどの検索ソフトウェアを活用して、AWS上で検索ソリューションを構築できる。Amazon RDSやAmazon S3と連携。OpenSearchは、ログ分析、リアルタイムアプリケーションモニタリング、クリックストリーム分析などのユースケースに対応したオープンソースの検索および分析エンジン |
 | AppSync | GraphQLを使用して複数のデータソースを統合し、リアルタイムでのデータ更新や効率的なデータ取得を支援するサービス。 |
 
 ## 🔧 運用 & 管理（Management & Governance）
@@ -89,7 +90,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [AWS Organizations](./markdown/Organizations.md) | 複数のAWSアカウントを一元管理し、ポリシー適用や請求統合を行うためのサービス。SCP（サービスコントロールポリシー）でIAMアクセス制御を行う。 |
 | [IAM](./markdown/IAM.md) | ユーザー管理とアクセス制御サービス。 |
 | IAM Identity Center （以前のAWS Single Sign-On） | AWSアカウントやアプリケーションへの`シングルサインオン（SSO）`を提供し、ユーザーのアクセス管理を一元化するサービス。 |
-| [AD関連](./markdown/AD関連.md) | - |
+| [Directory Service](./markdown/Directory%20Service.md) | - |
 
 ## 📨 メッセージング & インテグレーション
 
@@ -124,6 +125,7 @@ AWS-SAA-C03 を取得するまでの学習
 ## その他
 
 - [横断的な機能](./markdown/横断的な機能.md)
+- [データ移行](./markdown/データ移行.md)
 - [設定関連](./markdown/設定関連.md)
 - [一般用語](./markdown/用語.md)
 

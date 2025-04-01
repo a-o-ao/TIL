@@ -1,5 +1,7 @@
 # AWS Auto Scalling
 
+https://docs.aws.amazon.com/ja_jp/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html
+
 Auto Scaling自体はAuto Scaling グループを作成して使用し、対象のリソース（EC2やECSサービスなど）に対してアタッチします。
 適切なスケーリングポリシーを設定することで、リソースの自動管理が可能になります。
 

@@ -74,3 +74,10 @@ HTTPSリスナーを設定する場合、**SSL/TLS証明書とセキュリティ
   - `ELBSecurityPolicy-TLS-1-2-2017-01`（TLS 1.2 のみ有効）
   - `ELBSecurityPolicy-TLS-1-1-2017-01`（TLS
 
+## その他
+
+### ELBでHTTPSを有効化 & EC2のデータ暗号化
+- ELBでHTTPSを利用するには、ACMのSSL/TLS証明書を設定し、リスナーでHTTPSプロトコルを有効化する
+- HTTPS通信により、クライアントとELB、ELBとEC2間の通信が暗号化される
+- EC2のデータ暗号化には、EBSボリュームの暗号化を有効にする必要がある
+
