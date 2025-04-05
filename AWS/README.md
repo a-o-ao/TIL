@@ -9,7 +9,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [EC2](./markdown/EC2.md) | 仮想サーバーを提供するクラウドコンピューティングサービス。 |
 | Lambda | サーバーレスでコードを実行できるサービス。 |
 | ECS | コンテナオーケストレーションサービス。 |
-| EKS | Kubernetesを利用したコンテナ管理サービス。 |
+| [EKS](./markdown/EKS.md) | Kubernetesを利用したコンテナ管理サービス。 |
 | AWS Batch | バッチ処理を自動化するサービス。 |
 | AWS Fargate | サーバーレスでコンテナを実行できるサービス。 |
 | AWS Outposts | オンプレミス環境でAWSサービスを利用できるハードウェアソリューション。 |
@@ -37,7 +37,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [ELB](./markdown/ELB.md) | 負荷分散サービス。 |
 | Direct Connect | 専用線でAWSとオンプレミスを接続するサービス。 |
 | [API Gateway](./markdown/API%20Gateway.md) | API管理と公開を行うサービス。 |
-| Global Accelerator | 複数のリージョンにまたがるアプリケーションの可用性とパフォーマンスを向上させるサービス。 |
+| [Global Accelerator](./markdown/Global%20Accelerator.md) | 複数のリージョンにまたがるアプリケーションの可用性とパフォーマンスを向上させるサービス。 |
 | [その他ネットワーク関連](./markdown/その他ネットワーク関連.md) | - |
 
 ## 🗃️ データベース（Database）
@@ -119,7 +119,7 @@ AWS-SAA-C03 を取得するまでの学習
 | AWS DeepComposer   | 生成AIによるモデルを利用して音楽を作成しながら機械学習を学べるサービス。 |
 | Amazon Forecast | 時系列データに基づいて需要予測を行う機械学習サービス。 |
 | Amazon Personalize | ユーザー向けのパーソナライズされた推薦システムを構築するためのサービス。 |
-| Amazon Fraud Detector | 詐欺を検出するための機械学習を利用したサービス。トランザクションデータを元に不正行為を予測。 |
+| Amazon Fraud Detector | 詐欺を検出するための機械学習を利用したサービス。トランザクションデータを元に不正行為を予測。単独でも機能するが、データの取得・保存・通知などは別のAWSリソースと組み合わせる必要がある。[サーバレスと機械学習サービスを利用したリアルタイム不正検知](https://aws.amazon.com/jp/blogs/news/real-time-fraud-detection-using-aws-serverless-and-machine-learning-services/) |
 | Amazon Machine Learning | シンプルなインターフェースで機械学習モデルの作成、トレーニング、デプロイを可能にするサービス。|
 | Amazon Augumented AI | 人間の判断を機械学習モデルの予測結果に組み合わせ、AIの結果を人間が確認・承認するプロセスを組み込むサービス。特に重要な意思決定において信頼性を高める。 |
 

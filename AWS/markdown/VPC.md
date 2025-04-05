@@ -20,6 +20,8 @@ VPC内からインターネットを介さずに、AWSのサービスにプラ�
 | **インターフェイスエンドポイント** | AWSの多くのサービス（S3、DynamoDB、SNS、SQS、Lambda、CloudWatchなど）やカスタムサービス |
 | **ゲートウェイエンドポイント**    | **Amazon S3**と**Amazon DynamoDB**                                      |
 
+[インターフェイスエンドポイントに対応しているサービス一覧](https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html)
+
 ## サブネット
 
 ### AWS VPCのサブネットごとのIPアドレスの数
