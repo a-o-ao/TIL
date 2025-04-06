@@ -84,13 +84,14 @@ AWS-SAA-C03 を取得するまでの学習
 | [Shield](./markdown/Shield.md) | DDoS保護サービス。 |
 | [WAF](./markdown/WAF.md) | Webアプリケーションファイアウォール。 |
 | Secrets Manager | シークレット管理とローテーションサービス。 |
-| [GuardDuty](./markdown/GuardDuty.md) | 悪意のあるアクティビティや不正行為を検出するための脅威検出サービス。
-| Macie | AWS内の個人データを自動的に検出、分類、保護するサービス。
+| [GuardDuty](./markdown/GuardDuty.md) | 悪意のあるアクティビティや不正行為を検出するための脅威検出サービス。|
 | [その他セキュリティ関連](./markdown/セキュリティ.md) | - |
+| AWS Encryption SDK | 特定のプログラミング言語に依存しない暗号化専用のライブラリ |
+| Macie | AWS内の個人データを自動的に検出、分類、保護するサービス。 |
 | [AWS Organizations](./markdown/Organizations.md) | 複数のAWSアカウントを一元管理し、ポリシー適用や請求統合を行うためのサービス。SCP（サービスコントロールポリシー）でIAMアクセス制御を行う。 |
 | [IAM](./markdown/IAM.md) | ユーザー管理とアクセス制御サービス。 |
 | IAM Identity Center （以前のAWS Single Sign-On） | AWSアカウントやアプリケーションへの`シングルサインオン（SSO）`を提供し、ユーザーのアクセス管理を一元化するサービス。 |
-| [Directory Service](./markdown/Directory%20Service.md) | - |
+| [Directory Service](./markdown/Directory%20Service.md) | AD に依存するワークロードの統合を簡素化し、セキュリティとコンプライアンスを強化し、クラウド移行を合理化するための包括的なクラウド |
 
 ## 📨 メッセージング & インテグレーション
 
