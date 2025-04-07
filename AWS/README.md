@@ -57,13 +57,14 @@ AWS-SAA-C03 を取得するまでの学習
 | リソース名 | 概要 |
 | ----------------- | --------------------------------------------------------------- |
 | Athena | S3データに対するSQLクエリサービス。 |
-| [Glue](./markdown/Glue.md) | データカタログとETLを提供するサービス。 |
+| [Glue](./markdown/Glue.md) | データカタログを通じてデータのセキュリティとガバナンスを一元的に管理するためのサービス。 |
 | EMR | HadoopやSparkを使ったビッグデータ処理サービス。 |
 | Redshift Spectrum | S3データを直接クエリ可能なRedshift拡張機能。 |
 | [Kinesis](./markdown/Kinesis.md) | リアルタイムデータストリーミングサービス。 |
 | QuickSight | BIダッシュボードサービス。 |
 | Amazon OpenSearch Service | OpenSearchや従来のElasticsearch OSSなどの検索ソフトウェアを活用して、AWS上で検索ソリューションを構築できる。Amazon RDSやAmazon S3と連携。OpenSearchは、ログ分析、リアルタイムアプリケーションモニタリング、クリックストリーム分析などのユースケースに対応したオープンソースの検索および分析エンジン |
 | AppSync | GraphQLを使用して複数のデータソースを統合し、リアルタイムでのデータ更新や効率的なデータ取得を支援するサービス。 |
+| [Lake Formation](./markdown/Lake%20Formation.md) | S3上にセキュアなデータレイクをすばやく作るためのサービス |
 
 ## 🔧 運用 & 管理（Management & Governance）
 
