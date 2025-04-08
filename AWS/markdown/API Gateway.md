@@ -38,3 +38,95 @@ API Gatewayのキャッシュは、APIレスポンスを一時的に保存する
 - キャッシュの有効期限: キャッシュには有効期限を設定でき、指定した時間が経過すると再度バックエンドにリクエストが送信されます。
 
 キャッシュは、特に頻繁にリクエストされるデータを提供するAPIや、レスポンスが変更されにくいリソースに有効です。
+
+## Lambda プロキシ統合
+
+API Gatewayからのリクエストを“まるごと”Lambda関数に渡し、レスポンスもLambdaがすべて返す方式。
+
+#### API Gateway → Lambda（リクエスト）
+
+```json
+{
+  "resource": "/users/{id}",
+  "path": "/users/123",
+  "httpMethod": "GET",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "queryStringParameters": {
+    "verbose": "true"
+  },
+  "pathParameters": {
+    "id": "123"
+  },
+  "body": null,
+  "isBase64Encoded": false
+}
+```
+
+#### Lambda → API Gateway（レスポンス）
+
+```json
+{
+  "statusCode": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "{\"id\": \"123\", \"name\": \"Taro\"}"
+}
+```
+
+## Lambda 非プロキシ統合（カスタム統合）
+
+API Gatewayがリクエストやレスポンスを事前・事後に加工して、Lambdaと連携する方法。<br>
+API Gatewayが“仲介役”になり、リクエストやレスポンスをマッピングテンプレートで変換できる統合方法。
+
+#### API Gateway → Lambda（リクエスト）
+
+```velocity
+{
+  "userId": "$input.params('id')",
+  "verbose": "$input.params('verbose')"
+}
+```
+
+→Lambda はこのようなシンプルな JSON を受け取る：
+```json
+{
+  "userId": "123",
+  "verbose": "true"
+}
+```
+
+#### レスポンスマッピングテンプレート（Lambda → API Gateway）
+
+```velocity
+#set($inputRoot = $input.path('$'))
+{
+  "result": $inputRoot,
+  "status": "OK"
+}
+```
+
+→クライアントにはこう返る：
+```json
+{
+  "result": {
+    "id": "123",
+    "name": "Taro"
+  },
+  "status": "OK"
+}
+```
+
+### Lambda プロキシ統合 と 非プロキシ統合 の違い
+
+| 比較項目 | Lambda プロキシ統合 | 非プロキシ統合（カスタム統合） |
+|-----------|----------------------|----------------------------------|
+| リクエスト形式 | APIの内容をすべて1つのJSONでLambdaへ渡す | マッピングテンプレートで加工したリクエストをLambdaへ渡す |
+| レスポンス形式 | Lambdaがステータスコード・ヘッダー・ボディを含むJSONを返す | Lambdaの出力をテンプレートでAPI Gatewayが整形 |
+| 柔軟性 | Lambdaで全て処理（シンプル） | Gateway側で前後処理が可能（柔軟） |
+| マッピングテンプレート | ❌ 不要 | ✅ 必要（Velocity Template Language使用） |
+| 開発の自由度 | 高い（コードで自由に処理） | 中程度（テンプレートで制御） |
+| 主な用途 | サーバーレスAPI、シンプルな構成 | 外部連携、複雑な前後処理が必要なケース |
+

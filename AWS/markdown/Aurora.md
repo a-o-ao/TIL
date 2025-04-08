@@ -2,7 +2,27 @@
 
 https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html
 
-## ## Aurora Global Database（PostgreSQL vs. MySQL）の違い
+##  Aurora Global Database
+
+1つのプライマリリージョンに書き込みDBを持ち、他のリージョンに読み取り専用のレプリカを配置できる Aurora の機能です。
+
+### 主な特徴
+
+| 項目 | 内容 |
+|------|------|
+| 複数リージョン対応 | プライマリ＋最大5つのリードレプリカリージョンに対応 |
+| レプリカの用途 | グローバルアプリ向けの読み取り最適化（地域ごとにレイテンシ削減） |
+| レプリケーション | 1秒未満のレイテンシで非同期レプリケーション（専用の高速ネットワーク） |
+| フェイルオーバー | プライマリが障害時、他リージョンを昇格して継続運用可能 |
+| 対応エンジン | Aurora MySQL と Aurora PostgreSQL に対応（バージョン制限あり） |
+
+
+### 注意点
+- 複数リージョンでも書き込みは1リージョンのみ
+- セカンダリリージョンは読み取り専用（必要に応じて昇格可）
+- グローバルデータベースの構成には専用の設定が必要（通常のレプリカとは異なる）
+
+### Aurora Global Database（PostgreSQL vs. MySQL）の違い
 
 | **機能**              | **Aurora PostgreSQL**          | **Aurora MySQL**               |
 |----------------------|-----------------------------|-------------------------------|
