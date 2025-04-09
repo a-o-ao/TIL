@@ -35,6 +35,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [Route 53](./markdown/Route53.md) | DNS管理とトラフィックルーティングサービス。 |
 | [CloudFront](./markdown/CloudFront.md) | グローバルCDNサービス。 |
 | [ELB](./markdown/ELB.md) | 負荷分散サービス。 |
+| AWS Load Balancer Controller | Kubernetes クラスター（特に Amazon EKS）上で動作し、AWS のロードバランサーリソース（ALB/NLB）を自動的にプロビジョニング・管理するためのコントローラー。 |
 | Direct Connect | 専用線でAWSとオンプレミスを接続するサービス。 |
 | [API Gateway](./markdown/API%20Gateway.md) | API管理と公開を行うサービス。 |
 | [Global Accelerator](./markdown/Global%20Accelerator.md) | 複数のリージョンにまたがるアプリケーションの可用性とパフォーマンスを向上させるサービス。 |
@@ -102,6 +103,7 @@ AWS-SAA-C03 を取得するまでの学習
 | SNS | プッシュ通知とメッセージ配信サービス。 |
 | EventBridge | イベント管理とルーティングサービス。 |
 | Step Functions | サーバーレスワークフロー管理サービス。 |
+| Amazon AppFlow | SaaSアプリケーション（Salesforce, Slack, Google Analytics など）とAWSサービス（S3, Redshift など）との間でデータを安全かつ双方向に転送するマネージドサービス |
 
 ## 🧠 機械学習（Machine Learning）
 
@@ -124,17 +126,6 @@ AWS-SAA-C03 を取得するまでの学習
 | Amazon Fraud Detector | 詐欺を検出するための機械学習を利用したサービス。トランザクションデータを元に不正行為を予測。単独でも機能するが、データの取得・保存・通知などは別のAWSリソースと組み合わせる必要がある。[サーバレスと機械学習サービスを利用したリアルタイム不正検知](https://aws.amazon.com/jp/blogs/news/real-time-fraud-detection-using-aws-serverless-and-machine-learning-services/) |
 | Amazon Machine Learning | シンプルなインターフェースで機械学習モデルの作成、トレーニング、デプロイを可能にするサービス。|
 | Amazon Augumented AI | 人間の判断を機械学習モデルの予測結果に組み合わせ、AIの結果を人間が確認・承認するプロセスを組み込むサービス。特に重要な意思決定において信頼性を高める。 |
-
-
-## 🏢 企業向けアプリケーション
-
-| リソース名 | 概要 |
-| --------------- | --------------------------------------------------------------- |
-| WorkSpaces | 仮想デスクトップサービス。 |
-| AppStream 2.0 | アプリケーションストリーミングサービス。 |
-| WorkDocs | ファイル共有とコラボレーションサービス。 |
-| WorkMail | 企業向けメールサービス。 |
-| Chime | ビデオ会議とチャットサービス。 |
 
 ## その他
 

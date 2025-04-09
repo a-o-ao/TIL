@@ -30,4 +30,25 @@ Amazon CloudWatchは、AWSのリソースやアプリケーション、サービ
 | **インストール場所**      | サーバーやインスタンス（Linux、Windows、コンテナなど）           | AWSクラウド内で保存されるログデータ        |
 | **データの収集方法**      | メトリクス（CPU使用率、メモリ使用量など）、システムログやアプリケーションログを収集 | ログデータの保存、検索、視覚化、アラート設定 |
 
+## CloudWatch Container Insights
+
+Amazon ECS、EKS、Kubernetes、および Fargate などの コンテナ環境に特化したモニタリング機能
+
+### 主な機能
+
+|項目	|説明|
+|----|-----|
+|対象|	Amazon ECS / EKS / Kubernetes / AWS Fargate|
+|収集内容|	CPU使用率、メモリ使用量、ディスクI/O、ネットワークI/O、コンテナ数など|
+|可視化|	CloudWatchダッシュボードでグラフ表示、自動ダッシュボードも生成される|
+|ログ統合|	CloudWatch Logsと連携し、ログとメトリクスを統合的に監視可能|
+|粒度|	クラスター / ノード / サービス / タスク / コンテナ 単位での監視が可能|
+
+### 使い方
+
+1. CloudWatch Agent または AWS Distro for OpenTelemetry（ADOT） をインストール
+
+2. 必要な IAM 権限を設定
+
+3. CloudWatch による自動ダッシュボードが作成され、メトリクスが可視化される
 

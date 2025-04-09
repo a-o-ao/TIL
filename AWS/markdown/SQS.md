@@ -52,3 +52,47 @@ https://docs.aws.amazon.com/ja_jp/autoscaling/ec2/userguide/as-using-sqs-queue.h
 - デフォルト4日間（最小60秒～最大14日で設定可能）
 - アプリケーションでメッセージ削除を行わないと、保持期間超過までキューが滞留する
 
+## SQSのアクセス許可の種類
+https://repost.aws/ja/knowledge-center/sqs-queue-access-permissions
+
+### IAMポリシー
+- ユーザー・ロールに付与するアクセス権。
+- 「誰が、どのSQSに、何の操作をできるか」を定義。
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["sqs:SendMessage", "sqs:ReceiveMessage"],
+      "Resource": "arn:aws:sqs:ap-northeast-1:123456789012:my-queue"
+    }
+  ]
+}
+```
+
+### SQSアクセスポリシー（SQSキューポリシー）
+- SQSキューそのものに設定するポリシー。
+- `他アカウントやサービスからのアクセスを許可す`る場合に必要。
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowLambdaSendMessage",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Action": "sqs:SendMessage",
+      "Resource": "arn:aws:sqs:ap-northeast-1:123456789012:my-queue"
+    }
+  ]
+}
+```
+
+---
+- IAMポリシーだけでは、自アカウント内ユーザー/ロールに対する許可しかできない。
+- 他アカウントからのアクセス（例：S3やLambda、外部アカウント）を許可するには、`SQSアクセスポリシー（リソースベースポリシー）`が必要。

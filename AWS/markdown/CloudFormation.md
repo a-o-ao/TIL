@@ -34,3 +34,33 @@ CloudFormationのスタックセットは、複数のAWSアカウントやリー
 
 複数のアカウントにおけるスタックの更新が実行される。
 
+
+## ネットワークACLの設定
+
+### IPアドレス172.28.10.1を持つクライアントPCからSSH接続を行う場合
+
+```yaml
+# 送信（Egress）: EC2 → クライアントPC（戻りの通信）
+NetworkAcl
+  RuleNumber: 100
+  RuleAction: allow
+  Egress: true
+  CidrBlock: 172.28.10.1/32
+  PortRange:
+    From: 1024
+    To: 65535
+
+# 受信（Ingress）: クライアントPC → EC2（SSHポート22）
+NetworkAcl
+  RuleNumber: 120
+  RuleAction: allow
+  Egress: false
+  CidrBlock:172.28.10.1/32
+  PortRange:
+    From: 22
+    To: 22
+```
+
+- `Egress: true`: 「送信トラフィック（アウトバウンド）に対するルール」を意味する。falseにするとインバウンルールとなる。
+- ここで指定されたポート範囲（1024–65535）は、LinuxなどのOSで使われる エフェメラルポート（動的ポート）範囲 に対応している。
+
