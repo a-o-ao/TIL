@@ -2,7 +2,7 @@
 
 https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html
 
-世界中のユーザーからのアプリケーションへのアクセスを高速・安定化するサービスです。
+Global Accelerator は、グローバルなネットワークを使って、ユーザーから最も近い AWS エッジロケーションを経由して、アプリケーションに高速・信頼性高くアクセスさせるサービス。
 
 ### 特徴：
 - AWSのグローバルネットワーク経由で最適なルートを選択
@@ -45,3 +45,15 @@ https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelera
 
 併用することで、アプリ全体のパフォーマンスが最大化されます。
 
+## AWS Global Accelerator の標準アクセラレーターのエンドポイント
+
+Global Accelerator に設定できる「標準アクセラレーターのエンドポイント」は、トラフィックを実際に受け取る ターゲット（バックエンド） のことです。
+
+### 対応するエンドポイントの種類
+
+|種類|	説明|
+|----|----|
+|Application Load Balancer (ALB)|	L7レベルのロードバランサー|
+|Network Load Balancer (NLB)|	L4レベルで高速処理が可能|
+|EC2 インスタンス|	単体インスタンスでも可能（直接指定）|
+|Elastic IP アドレス|	固定IPを持つリソースへのルーティング|

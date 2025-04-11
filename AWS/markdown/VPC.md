@@ -116,3 +116,10 @@ https://docs.aws.amazon.com/ja_jp/vpc/latest/peering/vpc-peering-basics.html#vpc
 - 稼働中のアタッチ（ホットアタッチ）
 - 停止中のアタッチ（ウォームアタッチ）
 - インスタンス起動中のアタッチ（コールドアタッチ）
+
+## PrivateLink
+
+AWS PrivateLink は、VPC 内から他の AWS サービスや VPC サービスに対して、インターネットを経由せずにプライベート接続できる仕組み。
+
+利用料金が発生するため、無料で利用可能なゲートウェイ型VPCエンドポイントの方がコスト削減になる。
+
