@@ -1,5 +1,11 @@
 # AWS WAF
 
+AWS WAF（Web Application Firewall）は、脆弱性を突く攻撃（クロスサイトスクリプティングやSQLインジェクションなど）から、Webアプリケーションを保護するサービスです。
+
+「Web ACL」というアクセスコントロールリストで、IPアドレス、HTTPヘッダー、HTTP本文、URI文字列などに対してフィルタリングの条件を設定できます。
+
+AWS WAFは、Amazon CloudFront、Application Load Balancer、Amazon API Gatewayなどに割り当てて利用します。Network Load Balancer（NLB）とClassic Load Balancer（CLB）には対応していないので利用できません。
+
 AWS WAFのウェブアクセスコントロールリスト（ウェブACL）を利用することで、対象のWEBサーバーが応答するすべてのHTTP(S)リクエストを詳細に管理することが可能です。以下の要素に基づいてアクセス元を特定し、制御することができます。
 
 - リクエストのIPアドレスの発信元

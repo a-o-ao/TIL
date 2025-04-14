@@ -21,11 +21,11 @@ AWS-SAA-C03 を取得するまでの学習
 | [S3](./markdown/S3.md) | オブジェクトストレージサービス。 |
 | [Storage Gateway](./markdown/Storage%20Gateway.md) | オンプレミスのストレージをAWSクラウドに接続するためのハイブリッドクラウドストレージサービス。 |
 | [EBS](./markdown/EBS.md) | ブロックストレージサービス。 |
-| EFS | フルマネージドの`NFS`ファイルシステム。 |
+| [EFS](./markdown/EFS.md) | フルマネージドの`NFS`ファイルシステム。 |
 | [FSx](./markdown/FSx.md) | 高性能なファイルシステムを提供するサービス。 |
 | AWS Backup | データバックアップと復旧を自動化するサービス。 |
 | Glacier | 低コストの長期保存向けストレージ。 |
-| DataSync | ストレージのデータ移行・バックアップ・同期を効率的に行うマネージドサービス |
+| [DataSync](./markdown/DataSync.md) | ストレージのデータ移行・バックアップ・同期を効率的に行うマネージドサービス |
 
 ## 🗺️ ネットワーキング & コンテンツ配信
 
