@@ -40,6 +40,8 @@ https://docs.aws.amazon.com/ja_jp/autoscaling/ec2/userguide/as-using-sqs-queue.h
 
 ➡ Amazon SQS を使ったイベント駆動型の Auto Scaling を実装する際に有効なアーキテクチャ！ 
 
+※`バックログ`：SQSキュー内にある処理待ちのメッセージ数
+
 ## SQSメッセージについて
 
 #### メッセージの制約

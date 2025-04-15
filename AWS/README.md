@@ -78,6 +78,7 @@ AWS-SAA-C03 を取得するまでの学習
 | Systems Manager | システム運用を一元管理するサービス。 |
 | AWS Config | AWSリソースの設定変更を追跡し、コンプライアンスを評価するサービス。 |
 | Elastic Disaster Recovery（AWS DRS） | オンプレミスや他のクラウド上のシステムを AWS 上に複製し、障害発生時に迅速に復旧できるようにするための ディザスタリカバリ（災害復旧）サービス |
+| [X-RAY](https://docs.aws.amazon.com/ja_jp/xray/latest/devguide/aws-xray.html) | アプリケーションが処理するリクエストに関するデータを収集するサービスであり、そのデータを表示、フィルタリング、インサイトを取得して、最適化の問題と機会を特定するために使用できるツールを提供 |
 
 ## 🔒 セキュリティ & アイデンティティ
 
@@ -95,13 +96,14 @@ AWS-SAA-C03 を取得するまでの学習
 | [IAM](./markdown/IAM.md) | ユーザー管理とアクセス制御サービス。 |
 | IAM Identity Center （以前のAWS Single Sign-On） | AWSアカウントやアプリケーションへの`シングルサインオン（SSO）`を提供し、ユーザーのアクセス管理を一元化するサービス。 |
 | [Directory Service](./markdown/Directory%20Service.md) | AD に依存するワークロードの統合を簡素化し、セキュリティとコンプライアンスを強化し、クラウド移行を合理化するための包括的なクラウド |
+| ACM | ・SSL/TLS証明書の 発行・管理・自動更新<br>・ELB、CloudFront、API Gatewayなどと連携して 通信の暗号化<br>・独自ドメイン用のカスタム証明書のインポートも可能 |
 
 ## 📨 メッセージング & インテグレーション
 
 | リソース名 | 概要 |
 | ------------- | --------------------------------------------------------------- |
-| [SQS](./markdown/SQS.md) | メッセージキューサービス。 |
-| SNS | プッシュ通知とメッセージ配信サービス。 |
+| [SQS](./markdown/SQS.md) | メッセージキューサービス。プル型 |
+| SNS | プッシュ通知とメッセージ配信サービス。標準で暗号化やフィルタリング機能がある。プッシュ型 |
 | EventBridge | イベント管理とルーティングサービス。 |
 | Step Functions | サーバーレスワークフロー管理サービス。 |
 | Amazon AppFlow | SaaSアプリケーション（Salesforce, Slack, Google Analytics など）とAWSサービス（S3, Redshift など）との間でデータを安全かつ双方向に転送するマネージドサービス |
