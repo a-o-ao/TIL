@@ -97,6 +97,11 @@ https://docs.aws.amazon.com/ja_jp/vpc/latest/peering/vpc-peering-basics.html#vpc
 
 - ルートテーブルで明示的にルートを設定する必要がある。
 
+## ネットワークACL
+
+- ルール番号の小さい順にルールが適用
+- ルール間で矛盾がある場合は、小さいルール番号のルールが優先
+
 ## Elastic Network Interface（ENI）
 
 ### ENIの主な機能
@@ -122,4 +127,15 @@ https://docs.aws.amazon.com/ja_jp/vpc/latest/peering/vpc-peering-basics.html#vpc
 AWS PrivateLink は、VPC 内から他の AWS サービスや VPC サービスに対して、インターネットを経由せずにプライベート接続できる仕組み。
 
 利用料金が発生するため、無料で利用可能なゲートウェイ型VPCエンドポイントの方がコスト削減になる。
+
+プライベートサブネット内のAWSリソースからVPC外のAWSサービスへ、プライベートネットワーク経由でアクセスするには「VPCエンドポイント」を利用します。
+
+VPCエンドポイントにはゲートウェイ型とAWS PrivateLink（インターフェイス型）があり、Amazon CloudWatch Logsへの接続は「AWS PrivateLink」を利用します。PrivateLinkは、CloudWatch LogsやS3など多数のサービスで利用できます。
+
+なお、CloudWatch Logsは、AWSサービスやEC2インスタンスのOSやアプリケーションのログを収集し、一元管理するサービスです。
+
+## Egress-Onlyインターネットゲートウェイ
+
+- NATゲートウェイとインターネットゲートウェイの特徴を併せ持つIPv6専用の機能
+- VPCからインターネットへ（Egress）の接続開始要求は通しますが、インターネットからVPCへ（Ingress）の接続開始要求は通さない
 
