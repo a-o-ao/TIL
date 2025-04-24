@@ -19,6 +19,7 @@ https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/what-is-eks.html
 ### スケーリング方法
 ####  Horizontal Pod Autoscaler (HPA)
 CPU使用率やメモリ使用量といったメトリクスに基づきポッドの数を自動的に増減させる水平方向のスケーリング機能です。
+別途 Metrics Server を導入する必要がある。
 
 #### Cluster Autoscaler
 ノード（実行環境）の数を自動的に増減させるスケーリング機能です。HPAによりポッドのスケールアウトが発生した時に、追加されるポッドを実行するだけのリソースが既存のノードに不足していると、追加のポッドは起動できず待ち状態（Pending）になります。このような場合に、Cluster Autoscalerは新しいポッドが必要とするリソースに基づいて新しいノードを追加し、逆に不要なノードがあればそれらのノードを終了します。

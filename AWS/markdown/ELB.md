@@ -81,3 +81,23 @@ HTTPSリスナーを設定する場合、**SSL/TLS証明書とセキュリティ
 - HTTPS通信により、クライアントとELB、ELBとEC2間の通信が暗号化される
 - EC2のデータ暗号化には、EBSボリュームの暗号化を有効にする必要がある
 
+### SNI（Server Name Indication）
+
+- 暗号化通信で使用するサーバー証明書をパブリックIPアドレスではなくドメイン名によって判断する技術
+- SNIに対応したELBに複数のサーバー証明書を導入すると、ELBが宛先ドメイン名から適切なサーバー証明書を判断してサーバーへ通信を転送する
+- ALB, NLB が対応
+
+### 暗号化
+
+クライアントとELB間で通信を暗号化し、ELBとターゲット間は平文の通信（暗号化されていない通信）を行う方法
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/22884/k58488.jpg?t=1708578744)
+
+
+クライアントとALB間、ALBとインスタンス間で別の暗号化通信を行う方法
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/22885/k58487.jpg?t=1708578744)
+
+NLBではHTTPS通信を処理せずにインスタンスへHTTPS通信を転送
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/22886/kk58487.jpg?t=1661918029)
