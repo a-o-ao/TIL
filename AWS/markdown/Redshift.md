@@ -2,6 +2,18 @@
 
 https://docs.aws.amazon.com/ja_jp/redshift/latest/dg/c_redshift_system_overview.html
 
+## アーキテクチャ
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/22854/k58382.jpg?t=1661918020)
+
+- Leaderノード（リーダーノード）
+各クラスタに一台だけ存在する司令塔（Leader）となるノードです。
+アプリケーションなどからのリクエストを受け付けて各Computeノードへ割り振り、またその結果を取りまとめてアプリケーションへ返す役割を果たします。
+
+- Computeノード（コンピュートノード）
+Leaderノードからの命令を処理するノードです。
+一つのComputeノードはCPU、メモリ、ストレージを搭載しており、Computeノードを増やすことでパフォーマンスを向上させることができます。
+
 ## ワークロード管理 (WLM) 
 
 WLM（Workload Management） は、Amazon Redshiftでクエリのワークロードを効率的に管理するための仕組みです。複数のクエリが実行される際に、リソースを適切に分配し、パフォーマンスを最適化する役割を持ちます。
