@@ -40,3 +40,10 @@ Amazon GuardDutyは悪意のあるアクティビティのために AWS アカ�
 | **関連付け可能リソース**       | EC2インスタンス、ENI（Elastic Network Interface）など               | VPC内の全てのサブネット                                           |
 | **適用タイミング**             | インスタンス起動時またはネットワークインターフェース作成時に適用       | サブネット作成時に適用                                           |
 
+## AWS Shield Advancedで保護できるAWSリソース
+
+- EC2インスタンス
+- Elastic Load Balancing（ELB）
+- Amazon CloudFront
+
+※Amazon API Gatewayには関連付けることができません
