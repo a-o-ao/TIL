@@ -88,7 +88,7 @@ AWS-SAA-C03 を取得するまでの学習
 
 | リソース名 | 概要 |
 | -------------------- | --------------------------------------------------------------- |
-| KMS | 暗号鍵管理サービス。 |
+| [KMS](./markdown/KMS.md) | 暗号鍵管理サービス。 |
 | [Shield](./markdown/Shield.md) | DDoS保護サービス。 |
 | [WAF](./markdown/WAF.md) | Webアプリケーションファイアウォール。 |
 | Secrets Manager | シークレット管理とローテーションサービス。 |
@@ -140,5 +140,7 @@ AWS-SAA-C03 を取得するまでの学習
 - [横断的な機能](./markdown/横断的な機能.md)
 - [データ移行](./markdown/データ移行.md)
 - [設定関連](./markdown/設定関連.md)
+- [DR](./markdown/DR.md)
+- [Well-Architected Framework](./markdown/Well-Architected%20Framework.md)
 - [一般用語](./markdown/用語.md)
 
