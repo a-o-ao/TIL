@@ -37,7 +37,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [CloudFront](./markdown/CloudFront.md) | グローバルCDNサービス。 |
 | [ELB](./markdown/ELB.md) | 負荷分散サービス。 |
 | AWS Load Balancer Controller | Kubernetes クラスター（特に Amazon EKS）上で動作し、AWS のロードバランサーリソース（ALB/NLB）を自動的にプロビジョニング・管理するためのコントローラー。 |
-| Direct Connect | 専用線でAWSとオンプレミスを接続するサービス。 |
+| [Direct Connect](./markdown/その他ネットワーク関連.md#direct-connect) | 専用線でAWSとオンプレミスを接続するサービス。 |
 | [API Gateway](./markdown/API%20Gateway.md) | API管理と公開を行うサービス。 |
 | [Global Accelerator](./markdown/Global%20Accelerator.md) | 複数のリージョンにまたがるアプリケーションの可用性とパフォーマンスを向上させるサービス。 |
 | [その他ネットワーク関連](./markdown/その他ネットワーク関連.md) | - |
@@ -75,7 +75,7 @@ AWS-SAA-C03 を取得するまでの学習
 | ----------------- | --------------------------------------------------------------- |
 | [Auto Scalling](./markdown/Auto%20Scalling.md) | リソースの負荷に応じてEC2やECSなどのキャパシティを自動で増減させるサービス |
 | [CloudFormation](./markdown/CloudFormation.md) | インフラをコードとして管理できるサービス。 |
-| CloudTrail | API呼び出しの監査ログを記録するサービス。<br>AWSアカウントにおけるガバナンス、コンプライアンス、運用監査、リスク監査を実施するためのサービスです。 |
+| CloudTrail | AWSサービスに対して「いつ」「誰によって」「どのような操作が行われたのか」を記録・保存するサービス<br>AWSアカウントにおけるガバナンス、コンプライアンス、運用監査、リスク監査を実施するためのサービスです。 |
 | [CloudWatch](./markdown/CloudWatch.md) | 監視とアラートを提供するサービス。 |
 | [Systems Manager](./markdown/Systems%20Manager.md) | システム運用を一元管理するサービス。 |
 | AWS Config | AWSリソースの設定変更を監視、記録し、リソースのセキュリティやコンプライアンスを評価するサービス。AWSリソースの設定がいつ変更されたかを記録し、変更がルールに準拠したものでない場合には「非準拠」として記録される。ACMで管理している証明書の有効期限を対象としたルールを作成できる。 |
@@ -99,13 +99,13 @@ AWS-SAA-C03 を取得するまでの学習
 | Macie | AWS内の個人データを自動的に検出、分類、保護するサービス。機械学習とパターンマッチングを用いて、自動的にS3バケット内のオブジェクトを分析し、個人情報（PII）や秘匿技術などの機密データを識別・分類する。検知結果はEventBridgeと連携してSNS通知するのが一般的。 |
 | [AWS Organizations](./markdown/Organizations.md) | 複数のAWSアカウントを一元管理し、ポリシー適用や請求統合を行うためのサービス。SCP（サービスコントロールポリシー）でIAMアクセス制御を行う。 |
 | [IAM](./markdown/IAM.md) | ユーザー管理とアクセス制御サービス。 |
-| IAM Identity Center （以前のAWS Single Sign-On） | AWSアカウントやアプリケーションへの`シングルサインオン（SSO）`を提供し、ユーザーのアクセス管理を一元化するサービス。 |
+| IAM Identity Center （以前のAWS Single Sign-On） | AWSアカウントやアプリケーションへの`シングルサインオン（SSO）`を提供し、ユーザーのアクセス管理を一元化するサービス。AWS Organizationsと組み合わせて使用することが推奨されている。 |
 | [Directory Service](./markdown/Directory%20Service.md) | AD に依存するワークロードの統合を簡素化し、セキュリティとコンプライアンスを強化し、クラウド移行を合理化するための包括的なクラウド |
 | Certificate Manager(ACM) | ・SSL/TLS証明書の 発行・管理・自動更新<br>・ELB、CloudFront、API Gatewayなどと連携して 通信の暗号化<br>・独自ドメイン用のカスタム証明書のインポートも可能 |
 | Inspector | 自動脆弱性管理サービス。EC2インスタンス、コンテナ（Amazon ECR）、Lambda関数などのAWSワークロードを継続的にスキャンし、​ソフトウェアの脆弱性や意図しないネットワークの露出を検出 |
 | Firewall Manager | 複数のAWSアカウントやサービスを対象に、firewallのルールを一元的に設定・管理するセキュリティ管理サービス。AWS WAF、AWS Shield Advancedなどと連携し、包括的なセキュリティガバナンスを実現。 |
 | Security Token Service（STS） | AWSリソースへのアクセスを必要とするユーザーやアプリケーションに、一時的なセキュリティ認証情報を提供するサービス。最短15分から最長36時間の有効期限。<br>例えば、企業内のディレクトリサービス（例: LDAP、Active Directoryなど）を利用して、既存のユーザーにAWSリソースへの一時的なアクセスを提供したり、異なるAWSアカウント間でリソースを共有するために一時的な認証情報を使用してアクセス権を付与する場合に利用する。 |
-| Control Tower | AWSにおけるベストプラクティスに基づいた、セキュアなマルチアカウント環境（ランディングゾーンと呼ばれます）のセットアップを自動化するマネージドサービス。AWSにおけるベストプラクティスに基づいた構成や設定、ルールの組み合わせをガードレール（コントロールとも呼ばれます）として提供 |
+| [Control Tower](./markdown/Organizations.md#aws-control-tower) | AWSにおけるベストプラクティスに基づいた、セキュアなマルチアカウント環境（ランディングゾーンと呼ばれます）のセットアップを自動化するマネージドサービス。AWSにおけるベストプラクティスに基づいた構成や設定、ルールの組み合わせをガードレール（コントロールとも呼ばれます）として提供 |
 
 ## 📨 メッセージング & インテグレーション
 
