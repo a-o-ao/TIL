@@ -130,9 +130,18 @@ AWS PrivateLink は、VPC 内から他の AWS サービスや VPC サービス�
 
 プライベートサブネット内のAWSリソースからVPC外のAWSサービスへ、プライベートネットワーク経由でアクセスするには「VPCエンドポイント」を利用します。
 
+## VPCエンドポイント
+
+VPC内のリソースからVPC外のAWSサービスへプライベートネットワーク経由でアクセス可能にする機能。
+
 VPCエンドポイントにはゲートウェイ型とAWS PrivateLink（インターフェイス型）があり、Amazon CloudWatch Logsへの接続は「AWS PrivateLink」を利用します。PrivateLinkは、CloudWatch LogsやS3など多数のサービスで利用できます。
 
 なお、CloudWatch Logsは、AWSサービスやEC2インスタンスのOSやアプリケーションのログを収集し、一元管理するサービスです。
+
+### VPCエンドポイントポリシー
+
+- VPCエンドポイントの接続先を制限する
+- VPCエンドポイントのゲートウェイ型とAWS PrivateLink（インターフェイス型）の両方で利用できる
 
 ## Egress-Onlyインターネットゲートウェイ
 

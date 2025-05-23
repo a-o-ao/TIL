@@ -2,7 +2,15 @@
 
 ## VPC アクセス（VPC 接続）
 
-VPC アクセスを設定するとどうなる？
+Lambda関数は、Lambda専用のセキュアなVPCに配置されているため、インターネットや、インターネットを経由してパブリックサブネット内のAWSリソースにはアクセスできますが、パブリックに公開されていないAWSリソースへはアクセスできません。
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/23012/k58661.jpg?t=1661918062)
+
+Lambda関数からAWS Site-to-Site VPN経由でオンプレミスのデータベースにアクセスするには、Lambda関数をVGWが接続されているVPCに関連付ける「VPCアクセス」の設定をする必要がある。
+
+PCアクセスを設定したLambda関数は、ENIを作成したサブネットへアクセスできるようになる代わりに、インターネットへアクセスできなくなります。
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/23013/kk58661.jpg?t=1661918062)
 
 |項目 | 内容|
 |----|----|

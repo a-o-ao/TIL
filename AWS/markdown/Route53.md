@@ -80,13 +80,21 @@ https://docs.aws.amazon.com/ja_jp/Route53/latest/DeveloperGuide/traffic-flow.htm
 
 Amazon Route 53 Resolverは、VPC内でのDNSクエリの解決を提供するAWSのサービスです。これにより、AWS環境内やオンプレミス環境とAWS間でDNS解決を行うことができます。具体的には、VPC内のリソースや外部ネットワーク（オンプレミス）からDNSクエリを送受信するために使用されます。
 
+### リゾルバールール
+
+DNSクエリをどのDNSリゾルバーに転送するかのルールを設定する
+
 ### インバウンドエンドポイント:
 - オンプレミスや外部ネットワークから、AWS VPC内のリソース（例えば、EC2インスタンスやRDS）に対するDNSクエリを受け取ることができます。
 - これにより、オンプレミスのDNSサーバーがVPC内のリソースを解決できるようになります。
 
+![image](https://ping-t-resouces.com/uploads/question_image/file/26976/k65809.jpg?t=1720156221)
+
 ### アウトバウンドエンドポイント:
 - AWS VPC内のリソースが、VPC外（オンプレミスのDNSサーバーやインターネット上のDNSサーバーなど）に対してDNSクエリを送信するために使用します。
 - これにより、AWSのリソースが外部のDNSサーバーにアクセスできるようになります。
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/26978/kk65809.jpg?t=1720156220)
 
 ### ハイブリッドDNS:
 - Route 53 Resolverは、オンプレミス環境とAWSクラウド環境の間でDNS解決を統一的に行えるため、ハイブリッドクラウド構成でのDNS管理を簡素化します。
