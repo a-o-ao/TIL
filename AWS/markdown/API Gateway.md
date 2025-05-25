@@ -186,3 +186,18 @@ Amazon API Gateway では、Lambda オーソライザーの代わりに Amazon C
 | シンプルで管理コストを減らしたい                     | ✅ Cognito ユーザープール                   |
 | 多様な外部認証サービスと連携する必要がある           | ✅ Lambda オーソライザー（または別のID連携）|
 
+## API GatewayのVPCリンク
+
+- Amazon API Gatewayで作成したAPIはユーザーが管理するVPC外に配置される
+- 作成したAPIからプライベートサブネット内のAWSリソースへ直接アクセスすることはできない
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/25572/k64028.jpg?t=1694668316)
+
+- VPCリンクを作成しNLB等を指定することでEC2などのAWSリソースにアクセスできる
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/25573/kk64028.jpg?t=1694668319)
+
+## Canaryリリース
+
+- まず既存の本番ステージに新しいAPIバージョンをデプロイし、一部のトラフィックを新しいバージョンに向ける
+- 例えば初めは20%のトラフィックを新バージョンに割り当て、新バージョンが安定して動作することが確認されたら、トラフィックの割合を徐々に増やしていき、最終的には全トラフィックを新バージョンに移行する手法

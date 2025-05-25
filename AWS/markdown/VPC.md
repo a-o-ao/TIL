@@ -130,6 +130,14 @@ AWS PrivateLink は、VPC 内から他の AWS サービスや VPC サービス�
 
 プライベートサブネット内のAWSリソースからVPC外のAWSサービスへ、プライベートネットワーク経由でアクセスするには「VPCエンドポイント」を利用します。
 
+#### PrivateLinkでCloudWatch LogsやS3にアクセスする時のイメージ
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/22926/k58520.jpg?t=1720424403)
+
+#### PrivateLinkで異なるアカウント間で通信する時のイメージ
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/27167/k65922.jpg?t=1724562623)
+
 ## VPCエンドポイント
 
 VPC内のリソースからVPC外のAWSサービスへプライベートネットワーク経由でアクセス可能にする機能。

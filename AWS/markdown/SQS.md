@@ -76,7 +76,7 @@ https://repost.aws/ja/knowledge-center/sqs-queue-access-permissions
 
 ### SQSアクセスポリシー（SQSキューポリシー）
 - SQSキューそのものに設定するポリシー。
-- `他アカウントやサービスからのアクセスを許可す`る場合に必要。
+- `他アカウントやサービスからのアクセスを許可`する場合に必要。
 
 ```json
 {
@@ -98,3 +98,9 @@ https://repost.aws/ja/knowledge-center/sqs-queue-access-permissions
 ---
 - IAMポリシーだけでは、自アカウント内ユーザー/ロールに対する許可しかできない。
 - 他アカウントからのアクセス（例：S3やLambda、外部アカウント）を許可するには、`SQSアクセスポリシー（リソースベースポリシー）`が必要。
+
+## ファンアウト
+
+SNSとSQSを組み合わせると「ファンアウト」構成を実装できます。ファンアウトとは、一つのメッセージを複数の送信先に配信し、それぞれが並列に処理を実行する仕組みのことです。これにより、効率的な分散処理を実現できます。
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/23115/k58754.jpg?t=1661918287)

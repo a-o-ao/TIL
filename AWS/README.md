@@ -68,6 +68,7 @@ AWS-SAA-C03 を取得するまでの学習
 | AppSync | GraphQLを使用して複数のデータソースを統合し、リアルタイムでのデータ更新や効率的なデータ取得を支援するサービス。 |
 | [Lake Formation](./markdown/Lake%20Formation.md) | S3上にセキュアなデータレイクをすばやく作るためのサービス |
 | DataZone | AWS、オンプレミス、サードパーティーに分散されたデータを一元的にカタログ化し、検索・共有・管理を効率化するサービス |
+| Managed Streaming for Apache Kafka (Amazon MSK) | pache KafkaをAWS上で効率的に運用できるようにするためのフルマネージドサービスです。大量のストリーミングデータを効率的に取り扱い、リアルタイムで処理するのに適しています。 |
 
 ## 🔧 運用 & 管理（Management & Governance）
 
@@ -114,7 +115,7 @@ AWS-SAA-C03 を取得するまでの学習
 | ------------- | --------------------------------------------------------------- |
 | [SQS](./markdown/SQS.md) | メッセージキューサービス。プル型 |
 | SNS | プッシュ通知とメッセージ配信サービス。標準で暗号化やフィルタリング機能がある。プッシュ型 |
-| EventBridge | イベント管理とルーティングサービス。 |
+| [EventBridge](./markdown/EventBridge.md) | イベント管理とルーティングサービス。 |
 | Step Functions | サーバーレスワークフロー管理サービス。 |
 | Amazon AppFlow | SaaSアプリケーション（Salesforce, Slack, Google Analytics など）とAWSサービス（S3, Redshift など）との間でデータを安全かつ双方向に転送するマネージドサービス |
 
