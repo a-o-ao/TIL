@@ -17,6 +17,12 @@ CloudFrontのオリジンサーバー（オリジナルデータがあるサー�
 | **Field-Level Encryption** | 特定フィールド（例：クレジットカード情報）をCloudFrontエッジで暗号化 |
 | **オリジンリクエストのヘッダー編集** | クライアント情報（IP、User-Agentなど）を付与してオリジンへ転送可能 |
 
+### Lambda@Edgeを利用した画像処理の例
+
+(画像に透かし処理を入れる例)
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/28267/k66728.jpg?t=1746853821)
+
 ---
 
 ### 署名付きCookiesと署名付きURLの違い

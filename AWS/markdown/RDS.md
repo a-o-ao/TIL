@@ -85,6 +85,8 @@ RDS ProxyはLambdaだけでなく、EC2、ECS、EKS、Elastic Beanstalk、Fargat
 | **セキュリティ**                 | アプリケーションに依存した認証情報管理       | IAM、Secrets Managerによるセキュアな認証管理       |
 | **管理の簡便さ**                 | アプリケーションで接続管理を行う必要あり     | RDS Proxyが接続管理を一元化、運用が簡単             |
 
+![image](https://ping-t-resouces.com/uploads/question_image/file/26434/k65579.jpg?t=1743311424)
+
 ## パラメータグループ、オプショングループで設定可能な項目
 
 タイムゾーンや最大接続数、監査ログなど、データベースに関する設定

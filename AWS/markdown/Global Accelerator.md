@@ -57,3 +57,9 @@ Global Accelerator に設定できる「標準アクセラレーターのエン�
 |Network Load Balancer (NLB)|	L4レベルで高速処理が可能|
 |EC2 インスタンス|	単体インスタンスでも可能（直接指定）|
 |Elastic IP アドレス|	固定IPを持つリソースへのルーティング|
+
+## 固定パブリックIPアドレスが利用可能
+Global Acceleratorは2つの固定パブリックIPアドレスを保有しており、ユーザーはこの固定IPアドレスへアクセスします。エンドポイントが増減してもIPアドレスに影響なくサービスを継続できるため可用性が向上します。<br>
+また、Elastic IPアドレスを割り当てられないALBへのアクセスが、Global Acceleratorを利用して固定IPアドレスでアクセス可能になります。
+
+![image](https://ping-t-resouces.com/uploads/question_image/file/21709/kkk56951.jpg?t=1652159536)
