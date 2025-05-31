@@ -87,6 +87,8 @@ HTTPSリスナーを設定する場合、**SSL/TLS証明書とセキュリティ
 - SNIに対応したELBに複数のサーバー証明書を導入すると、ELBが宛先ドメイン名から適切なサーバー証明書を判断してサーバーへ通信を転送する
 - ALB, NLB が対応
 
+![image](https://ping-t-resouces.com/uploads/question_image/file/22887/k58466.jpg?t=1661918029)
+
 ### 暗号化
 
 クライアントとELB間で通信を暗号化し、ELBとターゲット間は平文の通信（暗号化されていない通信）を行う方法
@@ -101,3 +103,8 @@ HTTPSリスナーを設定する場合、**SSL/TLS証明書とセキュリティ
 NLBではHTTPS通信を処理せずにインスタンスへHTTPS通信を転送
 
 ![image](https://ping-t-resouces.com/uploads/question_image/file/22886/kk58487.jpg?t=1661918029)
+
+
+### 登録解除の遅延
+
+デフォルトにより、Application Load Balancer は登録解除プロセスが完了するまで 300 秒待機して、ターゲットへ処理中のリクエストを完了しやすくします。Application Load Balancer が待機する時間を変更するには、登録解除の遅延値を更新します。
