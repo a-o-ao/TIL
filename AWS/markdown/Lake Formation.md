@@ -72,3 +72,11 @@
 4. **Lake Formationでデータアクセスを制限**
 5. **Athena や QuickSight で分析**（制御された範囲で）
 
+## Lake Formationアクセスコントローラー
+
+https://docs.aws.amazon.com/ja_jp/lake-formation/latest/dg/share-dl-fgac-tutorial.html
+
+きめ細かなアクセスコントロールが可能。例えば...
+
+- アカウント A のデータレイク管理者がアカウント B に対してきめ細かなアクセスを付与
+- アカウント B のユーザーがデータスチュワードとしてアカウント内の他のユーザーに対して共有テーブルへのきめ細かなアクセスを許可する

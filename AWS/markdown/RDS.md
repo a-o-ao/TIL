@@ -106,3 +106,9 @@ RDS ProxyはLambdaだけでなく、EC2、ECS、EKS、Elastic Beanstalk、Fargat
 - プライマリDBインスタンスとスタンバイDBインスタンスを2つの異なるAZに1つずつ配置することによって可用性を向上
 
 ![image](https://ping-t-resouces.com/uploads/question_image/file/22842/kkk58350.jpg?t=1661918016)
+
+## シャーディング
+
+水平パーティション分割、リレーショナルデータベースの一般的なスケールアウトアプローチ。<br>
+データを複数のDBに振り分けることでアクセスを分散させる。<br>
+RDSにシャーディング機能があるわけではなく、アプリケーションやミドルウェア側で実装する必要がある。

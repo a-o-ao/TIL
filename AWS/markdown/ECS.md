@@ -44,3 +44,10 @@ https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/Welcome.html
 | 手動スケーリング |	Auto Scaling グループのサイズを手動調整 |
 | Auto Scaling | ポリシー連携	クラスターレベルでEC2の数を自動スケーリング（Application Auto ScalingやStep Scaling） |
 | Capacity Provider |	タスクの需要に応じてEC2を自動増減（新しい推奨方式） |
+
+## サービススケジューラ
+
+https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/scheduling_tasks.html
+
+長期実行するステートレスサービスやアプリケーションに適している。<br>
+短時間ごと実行するような場合は EventBridge Scheduler のほうが向いている。

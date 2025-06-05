@@ -93,7 +93,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [KMS](./markdown/KMS.md) | 暗号鍵管理サービス。 |
 | [Shield](./markdown/Shield.md) | DDoS保護サービス。 |
 | [WAF](./markdown/WAF.md) | Webアプリケーションファイアウォール。 |
-| Secrets Manager | シークレット管理とローテーションサービス。 |
+| Secrets Manager | シークレット管理とローテーションサービス。データ暗号化に必要な証明書やキーを保存するための仕組み。 |
 | [GuardDuty](./markdown/GuardDuty.md) | 悪意のあるアクティビティや不正行為を検出するための脅威検出サービス。|
 | [その他セキュリティ関連](./markdown/セキュリティ.md) | - |
 | AWS Encryption SDK | 特定のプログラミング言語に依存しない暗号化専用のライブラリ |
@@ -102,7 +102,7 @@ AWS-SAA-C03 を取得するまでの学習
 | [IAM](./markdown/IAM.md) | ユーザー管理とアクセス制御サービス。 |
 | IAM Identity Center （以前のAWS Single Sign-On） | AWSアカウントやアプリケーションへの`シングルサインオン（SSO）`を提供し、ユーザーのアクセス管理を一元化するサービス。AWS Organizationsと組み合わせて使用することが推奨されている。 |
 | [Directory Service](./markdown/Directory%20Service.md) | AD に依存するワークロードの統合を簡素化し、セキュリティとコンプライアンスを強化し、クラウド移行を合理化するための包括的なクラウド |
-| Certificate Manager(ACM) | ・SSL/TLS証明書の 発行・管理・自動更新<br>・ELB、CloudFront、API Gatewayなどと連携して 通信の暗号化<br>・独自ドメイン用のカスタム証明書のインポートも可能 |
+| [Certificate Manager(ACM)](./markdown/ACM.md) | ・SSL/TLS証明書の 発行・管理・自動更新<br>・ELB、CloudFront、API Gatewayなどと連携して 通信の暗号化<br>・独自ドメイン用のカスタム証明書のインポートも可能 |
 | Inspector | 自動脆弱性管理サービス。EC2インスタンス、コンテナ（Amazon ECR）、Lambda関数などのAWSワークロードを継続的にスキャンし、​ソフトウェアの脆弱性や意図しないネットワークの露出を検出 |
 | Firewall Manager | 複数のAWSアカウントやサービスを対象に、firewallのルールを一元的に設定・管理するセキュリティ管理サービス。AWS WAF、AWS Shield Advancedなどと連携し、包括的なセキュリティガバナンスを実現。 |
 | Security Token Service（STS） | AWSリソースへのアクセスを必要とするユーザーやアプリケーションに、一時的なセキュリティ認証情報を提供するサービス。最短15分から最長36時間の有効期限。<br>例えば、企業内のディレクトリサービス（例: LDAP、Active Directoryなど）を利用して、既存のユーザーにAWSリソースへの一時的なアクセスを提供したり、異なるAWSアカウント間でリソースを共有するために一時的な認証情報を使用してアクセス権を付与する場合に利用する。 |
