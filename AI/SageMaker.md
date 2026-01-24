@@ -55,11 +55,14 @@ Amazon SageMakerで開発したモデルのデプロイ方法は以下の4つ。
 
 | 機能 | 説明 |
 |---|---|
-| SageMaker Data Wrangler | データ前処理・特徴量エンジニアリング |
+| SageMaker Data Wrangler | ・特徴量エンジニアリング専用ツール<br>・ノーコード / ローコード<br>・前処理の可視化・再利用 |
 | SageMaker Processing | データ前処理の並列実行 |
-| SageMaker Feature Store | 特徴量を一元管理する専用リポジトリ |
+| SageMaker Feature Store | 特徴量を一元管理する専用リポジトリ<br>学習用・推論用で同じ特徴量を使える |
 | SageMaker Ground Truth | データのラベル付けを効率化 |
 | SageMaker Clarify | データやモデルのバイアス評価 |
+
+※特徴量エンジニアリングとは<br>
+機械学習モデルが学習しやすい形に、元データを加工・変換すること
 
 ---
 
